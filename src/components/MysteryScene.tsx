@@ -96,20 +96,22 @@ export function MysteryScene({
           </p>
         </div>
 
-        {/* Factoid box */}
-        <div className="bg-primary/10 rounded-xl p-5 border-l-4 border-coral">
-          <div className="flex items-start gap-3">
-            <div className="bg-coral rounded-full p-2 shrink-0">
-              <Search className="w-4 h-4 text-accent-foreground" />
-            </div>
-            <div>
-              <h3 className="font-display font-semibold text-foreground mb-1">
-                Investigation Note
-              </h3>
-              <p className="text-muted-foreground font-body">{factoid}</p>
+        {/* Factoid box - only show if factoid exists */}
+        {factoid && (
+          <div className="bg-primary/10 rounded-xl p-5 border-l-4 border-coral">
+            <div className="flex items-start gap-3">
+              <div className="bg-coral rounded-full p-2 shrink-0">
+                <Search className="w-4 h-4 text-accent-foreground" />
+              </div>
+              <div>
+                <h3 className="font-display font-semibold text-foreground mb-1">
+                  Investigation Note
+                </h3>
+                <p className="text-muted-foreground font-body">{factoid}</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
