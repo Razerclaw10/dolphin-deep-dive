@@ -128,14 +128,11 @@ const Index = () => {
   const handleNext = useCallback(() => {
     if (currentScene < scenes.length - 1) {
       setCurrentScene((prev) => prev + 1);
-    } else {
-      setShowFinal(true);
     }
   }, [currentScene]);
 
   const handleRestart = useCallback(() => {
     setCurrentScene(0);
-    setShowFinal(false);
   }, []);
 
   if (showFinal) {
