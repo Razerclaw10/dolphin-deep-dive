@@ -28,9 +28,9 @@ const scenes = [
   {
     title: "Clues in the Ocean",
     description:
-      "You wade into the shallow waters near where the dolphin was found. The water has an unusual rainbow sheen on its surface. Local fishermen mention that they've seen fewer fish in recent years, and many animals in the area have gotten sick. The evidence is pointing somewhere...",
+      "The water in the bay has an unusual rainbow sheen on the surface. Many local fisherman report seeing less fish than usual as well...",
     factoid:
-      "Oil doesn't mix with water—it floats on top, creating a deadly film. This film blocks sunlight from reaching underwater plants and coats marine animals, destroying entire food chains.",
+      "Oil doesn't mix with water. Does this have anything to do with the rainbow color across the water?",
     image: sceneEvidence,
     buttonText: "Analyze the Evidence",
   },
