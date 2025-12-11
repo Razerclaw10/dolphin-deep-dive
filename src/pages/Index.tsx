@@ -35,11 +35,11 @@ const scenes = [
     buttonText: "Analyze the Evidence",
   },
   {
-    title: "Laboratory Analysis",
+    title: "Scientific Discovery",
     description:
-      "You take samples back to the marine research lab for testing. The results are clear: the dark residue contains polycyclic aromatic hydrocarbons (PAHs)—toxic chemicals found in crude oil. The chemical signature matches something that happened in these waters years ago...",
+      "After sampling the black liquid on the dolphins, it is discovered to contain PAHs, which are chemicals that are found in oil. Could this have killed the dolphin?",
     factoid:
-      "PAHs are cancer-causing chemicals that can persist in the environment for decades. Marine animals exposed to these chemicals often develop heart problems, immune system disorders, and reproductive issues.",
+      "PAHs have been shown to lead to numerous diseases, and are so dangerous that the FDA doesn't allow animals containing PAHs to be eaten",
     image: sceneResearch,
     buttonText: "Reveal the Truth",
   },
