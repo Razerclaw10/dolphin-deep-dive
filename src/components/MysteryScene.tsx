@@ -71,7 +71,7 @@ export function MysteryScene({
             src={image}
             alt={title}
             className={cn(
-              "w-full h-full object-cover transition-transform duration-500",
+              "w-full h-full object-contain transition-transform duration-500",
               isHovering && "scale-105"
             )}
           />
