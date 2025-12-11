@@ -11,9 +11,8 @@ const scenes = [
   {
     title: "A Mysterious Discovery",
     description:
-      "You're walking along a quiet Gulf Coast beach when you spot something unusual in the sand. It's a bottlenose dolphin, washed ashore. The dolphin has passed away, but what happened to it? As a marine detective, it's your job to find out. Let's begin the investigation...",
-    factoid:
-      "Bottlenose dolphins are one of the most well-known dolphin species. They can live for over 40 years and are highly intelligent mammals that depend on clean ocean waters to survive.",
+      "You're walking along a quiet Gulf Coast beach when you spot something unusual in the sand. It's a bottlenose dolphin, washed ashore. The dolphin has passed away, but what happened to it? Let's begin the investigation...",
+    factoid: "",
     image: sceneDiscovery,
     buttonText: "Examine the Dolphin",
   },
