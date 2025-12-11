@@ -63,7 +63,7 @@ export function MysteryScene({
 
         {/* Image container */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-secondary"
+          className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-secondary max-h-[40vh]"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
@@ -71,7 +71,7 @@ export function MysteryScene({
             src={image}
             alt={title}
             className={cn(
-              "w-full h-auto object-cover transition-transform duration-500",
+              "w-full h-full object-cover transition-transform duration-500",
               isHovering && "scale-105"
             )}
           />
