@@ -113,14 +113,16 @@ export function MysteryScene({
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Button
-            onClick={onNext}
-            size="lg"
-            className="group animate-pulse-glow"
-          >
-            <span className="font-display text-lg">{buttonText}</span>
-            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          {!isFinal && (
+            <Button
+              onClick={onNext}
+              size="lg"
+              className="group animate-pulse-glow"
+            >
+              <span className="font-display text-lg">{buttonText}</span>
+              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          )}
           
           {isFinal && onRestart && (
             <Button
