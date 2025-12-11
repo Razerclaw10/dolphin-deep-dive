@@ -67,11 +67,30 @@ export function MysteryScene({
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
+          {/* Left side extension - blurred duplicate */}
+          <div className="absolute left-0 top-0 h-full w-1/3 overflow-hidden">
+            <img
+              src={image}
+              alt=""
+              className="h-full w-auto object-cover object-left scale-150 blur-sm opacity-80"
+            />
+          </div>
+          
+          {/* Right side extension - blurred duplicate */}
+          <div className="absolute right-0 top-0 h-full w-1/3 overflow-hidden">
+            <img
+              src={image}
+              alt=""
+              className="h-full w-auto object-cover object-right scale-150 blur-sm opacity-80"
+            />
+          </div>
+          
+          {/* Center main image */}
           <img
             src={image}
             alt={title}
             className={cn(
-              "max-h-[35vh] w-auto object-contain transition-transform duration-500",
+              "max-h-[35vh] w-auto object-contain transition-transform duration-500 relative z-10",
               isHovering && "scale-105"
             )}
           />
@@ -80,7 +99,7 @@ export function MysteryScene({
           {!isFinal && (
             <div
               className={cn(
-                "absolute inset-0 bg-oil/20 flex items-center justify-center transition-opacity duration-300",
+                "absolute inset-0 bg-oil/20 flex items-center justify-center transition-opacity duration-300 z-20",
                 isHovering ? "opacity-100" : "opacity-0"
               )}
             >
