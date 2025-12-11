@@ -19,9 +19,9 @@ const scenes = [
   {
     title: "Strange Markings",
     description:
-      "You examine the dolphin more closely. Something catches your eye—there are dark, sticky patches on the dolphin's skin. The residue smells like petroleum. The dolphin's blowhole shows signs of irritation. What could have caused this?",
+      "The dolphin's skin appears to be covered in dark sticky patches with a funny smell. The dolphin doesn't appear rotten, so what could they be?",
     factoid:
-      "Dolphins breathe through a blowhole on top of their heads. When they surface to breathe, they can accidentally inhale oil and toxic fumes if the water is polluted, causing serious lung damage.",
+      "Dolphins breath through a blowhole on their heads, and they often surface. Pollution that gets in this blowhole can lead to lung damage.",
     image: sceneExamine,
     buttonText: "Search the Waters",
   },
