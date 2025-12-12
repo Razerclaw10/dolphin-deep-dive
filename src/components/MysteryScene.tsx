@@ -10,7 +10,6 @@ interface MysterySceneProps {
   description: string;
   factoid: string;
   image: string;
-  imageBg: string;
   buttonText: string;
   onNext: () => void;
   onRestart?: () => void;
@@ -24,7 +23,6 @@ export function MysteryScene({
   description,
   factoid,
   image,
-  imageBg,
   buttonText,
   onNext,
   onRestart,
@@ -65,34 +63,16 @@ export function MysteryScene({
 
         {/* Image container */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-secondary flex items-center justify-center"
+          className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-secondary"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {/* Left side extension - background only */}
-          <div className="absolute left-0 top-0 h-full w-1/3 overflow-hidden">
-            <img
-              src={imageBg}
-              alt=""
-              className="absolute top-1/2 -translate-y-1/2 h-[120%] w-auto min-w-full object-cover object-right"
-            />
-          </div>
-          
-          {/* Right side extension - background only */}
-          <div className="absolute right-0 top-0 h-full w-1/3 overflow-hidden">
-            <img
-              src={imageBg}
-              alt=""
-              className="absolute top-1/2 -translate-y-1/2 h-[120%] w-auto min-w-full object-cover object-left"
-            />
-          </div>
-          
-          {/* Center main image */}
+          {/* Main image - uses object-cover to fill container */}
           <img
             src={image}
             alt={title}
             className={cn(
-              "max-h-[35vh] w-auto object-contain transition-transform duration-500 relative z-10",
+              "w-full h-[35vh] object-cover transition-transform duration-500",
               isHovering && "scale-105"
             )}
           />
@@ -101,7 +81,7 @@ export function MysteryScene({
           {!isFinal && (
             <div
               className={cn(
-                "absolute inset-0 bg-oil/20 flex items-center justify-center transition-opacity duration-300 z-20",
+                "absolute inset-0 bg-oil/20 flex items-center justify-center transition-opacity duration-300",
                 isHovering ? "opacity-100" : "opacity-0"
               )}
             >
