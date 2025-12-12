@@ -6,11 +6,6 @@ import sceneExamine from "@/assets/scene-examine.png";
 import sceneEvidence from "@/assets/scene-evidence.png";
 import sceneResearch from "@/assets/scene-research.png";
 import sceneRevelation from "@/assets/scene-revelation.png";
-import sceneDiscoveryBg from "@/assets/scene-discovery-bg.png";
-import sceneExamineBg from "@/assets/scene-examine-bg.png";
-import sceneEvidenceBg from "@/assets/scene-evidence-bg.png";
-import sceneResearchBg from "@/assets/scene-research-bg.png";
-import sceneRevelationBg from "@/assets/scene-revelation-bg.png";
 
 const scenes = [
   {
@@ -19,7 +14,6 @@ const scenes = [
       "You're walking along a quiet Gulf Coast beach when you spot something unusual in the sand. It's a bottlenose dolphin, washed ashore. The dolphin has passed away, but what happened to it? Let's begin the investigation...",
     factoid: "",
     image: sceneDiscovery,
-    imageBg: sceneDiscoveryBg,
     buttonText: "Examine the Dolphin",
   },
   {
@@ -29,7 +23,6 @@ const scenes = [
     factoid:
       "Dolphins breath through a blowhole on their heads, and they often surface. Pollution that gets in this blowhole can lead to lung damage.",
     image: sceneExamine,
-    imageBg: sceneExamineBg,
     buttonText: "Search the Waters",
   },
   {
@@ -39,7 +32,6 @@ const scenes = [
     factoid:
       "Oil doesn't mix with water. Does this have anything to do with the rainbow color across the water?",
     image: sceneEvidence,
-    imageBg: sceneEvidenceBg,
     buttonText: "Analyze the Evidence",
   },
   {
@@ -49,7 +41,6 @@ const scenes = [
     factoid:
       "PAHs have been shown to lead to numerous diseases, and are so dangerous that the FDA doesn't allow animals containing PAHs to be eaten",
     image: sceneResearch,
-    imageBg: sceneResearchBg,
     buttonText: "Reveal the Truth",
   },
   {
@@ -59,7 +50,6 @@ const scenes = [
     factoid:
       "Studies show that dolphin populations in heavily oiled areas declined by up to 50% after the spill. Many survivors developed lung disease, reproductive problems, and weakened immune systems. The effects continue to impact new generations of dolphins born after 2010.",
     image: sceneRevelation,
-    imageBg: sceneRevelationBg,
     buttonText: "Learn More",
   },
 ];
@@ -160,7 +150,6 @@ const Index = () => {
         description={scene.description}
         factoid={scene.factoid}
         image={scene.image}
-        imageBg={scene.imageBg}
         buttonText={scene.buttonText}
         onNext={handleNext}
         onRestart={handleRestart}
