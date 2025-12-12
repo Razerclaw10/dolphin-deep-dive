@@ -74,7 +74,7 @@ export function MysteryScene({
             <img
               src={imageBg}
               alt=""
-              className="h-full w-auto min-w-full object-cover object-right"
+              className="absolute top-1/2 -translate-y-1/2 h-[120%] w-auto min-w-full object-cover object-right"
             />
           </div>
           
@@ -83,7 +83,7 @@ export function MysteryScene({
             <img
               src={imageBg}
               alt=""
-              className="h-full w-auto min-w-full object-cover object-left"
+              className="absolute top-1/2 -translate-y-1/2 h-[120%] w-auto min-w-full object-cover object-left"
             />
           </div>
           
