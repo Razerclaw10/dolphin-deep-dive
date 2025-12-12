@@ -10,6 +10,7 @@ interface MysterySceneProps {
   description: string;
   factoid: string;
   image: string;
+  imageBg: string;
   buttonText: string;
   onNext: () => void;
   onRestart?: () => void;
@@ -23,6 +24,7 @@ export function MysteryScene({
   description,
   factoid,
   image,
+  imageBg,
   buttonText,
   onNext,
   onRestart,
@@ -67,21 +69,21 @@ export function MysteryScene({
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {/* Left side extension - blurred duplicate */}
+          {/* Left side extension - background only */}
           <div className="absolute left-0 top-0 h-full w-1/3 overflow-hidden">
             <img
-              src={image}
+              src={imageBg}
               alt=""
-              className="h-full w-auto object-cover object-left scale-150 blur-sm opacity-80"
+              className="h-full w-auto object-cover object-left scale-150"
             />
           </div>
           
-          {/* Right side extension - blurred duplicate */}
+          {/* Right side extension - background only */}
           <div className="absolute right-0 top-0 h-full w-1/3 overflow-hidden">
             <img
-              src={image}
+              src={imageBg}
               alt=""
-              className="h-full w-auto object-cover object-right scale-150 blur-sm opacity-80"
+              className="h-full w-auto object-cover object-right scale-150"
             />
           </div>
           
