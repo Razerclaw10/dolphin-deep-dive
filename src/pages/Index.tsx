@@ -46,9 +46,22 @@ const scenes = [
   {
     title: "The Deepwater Horizon Disaster",
     description:
-      "The mystery is solved. On April 20, 2010, the Deepwater Horizon oil rig exploded in the Gulf of Mexico, releasing over 200 million gallons of crude oil—the largest marine oil spill in history. The disaster killed 11 workers and devastated marine ecosystems. Even today, dolphins and other wildlife continue to suffer from the long-term effects of this catastrophe.",
-    factoid:
-      "Studies show that dolphin populations in heavily oiled areas declined by up to 50% after the spill. Many survivors developed lung disease, reproductive problems, and weakened immune systems. The effects continue to impact new generations of dolphins born after 2010.",
+      "On April 20, 2010, the Deepwater Horizon oil rig exploded in the Gulf of Mexico, releasing over 200 million gallons of crude oil. This disaster killed 11 workers, and led to the long term suffering of many species in the ecosystem. The oil explosion was caused by the ignorance of many safety procedures, and the misreading of certain instruments.",
+    factoid: "",
+    infoBoxes: [
+      {
+        title: "Environmental Impact",
+        content: "The oil caused widespread disaster throughout the area. First, it contaminated plankton, which led to sicknesses spreading upwards through food chains and making larger predators sick. Also, the oil caused issues with reproduction and respiration in animals like dolphins.",
+      },
+      {
+        title: "Solutions",
+        content: "Multiple solutions were attempted to clean up the oil and save the environment. This included using buoys to limit the oil spread, skimmers to manually scoop up oil with boats, and burning oil away. Additionally, dispersants were used to reduce the size of the oil droplets, but there's debate on whether they actually helped reduce the spill's effects.",
+      },
+      {
+        title: "My Solution",
+        content: "My solution to solve this issue is to reintroduce oil-eating bacteria to areas that lack it. This solution has been proven to work in some areas, and allows for a cleanup that doesn't require a massive amount of human effort or money. Additionally, these bacteria can reduce oil in areas like the sea floor that are difficult to reach otherwise. Working with organizations like the NOAA will help obtain and spread these bacteria faster and with government approval.",
+      },
+    ],
     image: sceneRevelation,
     buttonText: "Learn More",
   },
