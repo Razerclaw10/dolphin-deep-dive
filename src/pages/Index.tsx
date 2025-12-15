@@ -162,6 +162,7 @@ const Index = () => {
         title={scene.title}
         description={scene.description}
         factoid={scene.factoid}
+        infoBoxes={scene.infoBoxes}
         image={scene.image}
         buttonText={scene.buttonText}
         onNext={handleNext}
