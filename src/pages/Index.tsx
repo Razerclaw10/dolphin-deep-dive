@@ -12,7 +12,7 @@ const scenes = [
     title: "A Mysterious Discovery",
     description:
       "You're walking along a quiet Gulf Coast beach when you spot something unusual in the sand. It's a bottlenose dolphin, washed ashore. The dolphin has passed away, but what happened to it? Let's begin the investigation...",
-    factoid: "",
+    factoid: "The marine ecosystem near here used to be relatively calm and well organized. Dolphins were near the top of the food web, and were often secondary consumers, with algae, fish, birds, and more keeping the whole web stable.",
     image: sceneDiscovery,
     buttonText: "Examine the Dolphin",
   },
