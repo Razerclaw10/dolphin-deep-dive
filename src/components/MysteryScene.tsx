@@ -20,6 +20,7 @@ interface MysterySceneProps {
   onNext: () => void;
   onRestart?: () => void;
   isFinal?: boolean;
+  isTitlePage?: boolean;
 }
 
 export function MysteryScene({
@@ -34,8 +35,44 @@ export function MysteryScene({
   onNext,
   onRestart,
   isFinal = false,
+  isTitlePage = false,
 }: MysterySceneProps) {
   const [isHovering, setIsHovering] = useState(false);
+
+  // Title page layout
+  if (isTitlePage) {
+    return (
+      <div className="w-full min-h-screen flex flex-col items-center justify-center p-4 md:p-8 animate-fade-in relative">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={image}
+            alt=""
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
+        </div>
+        
+        {/* Title content */}
+        <div className="relative z-10 text-center space-y-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground text-shadow-mystery leading-tight">
+            {title}
+          </h1>
+          <p className="text-xl md:text-2xl font-body text-muted-foreground italic">
+            {description}
+          </p>
+          <Button
+            onClick={onNext}
+            size="lg"
+            className="mt-8 group animate-pulse-glow text-lg px-8 py-6"
+          >
+            <span className="font-display">{buttonText}</span>
+            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={cn(
@@ -44,14 +81,14 @@ export function MysteryScene({
     )}>
       {/* Progress indicator */}
       <div className="fixed top-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        {Array.from({ length: totalScenes }).map((_, i) => (
+        {Array.from({ length: totalScenes - 1 }).map((_, i) => (
           <div
             key={i}
             className={cn(
               "w-3 h-3 rounded-full transition-all duration-300",
-              i < sceneNumber
+              i < sceneNumber - 1
                 ? "bg-coral scale-110"
-                : i === sceneNumber
+                : i === sceneNumber - 1
                 ? "bg-primary"
                 : "bg-muted"
             )}
@@ -64,7 +101,7 @@ export function MysteryScene({
         {/* Scene title */}
         <div className="text-center space-y-2">
           <span className="text-sm font-body text-muted-foreground uppercase tracking-widest">
-            Clue {sceneNumber + 1} of {totalScenes}
+            Clue {sceneNumber} of {totalScenes - 1}
           </span>
           <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground text-shadow-mystery">
             {title}
