@@ -38,7 +38,10 @@ export function MysteryScene({
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 md:p-8 animate-fade-in">
+    <div className={cn(
+      "w-full flex flex-col items-center p-4 md:p-8 animate-fade-in",
+      isFinal ? "min-h-screen py-16 overflow-y-auto" : "min-h-screen justify-center"
+    )}>
       {/* Progress indicator */}
       <div className="fixed top-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {Array.from({ length: totalScenes }).map((_, i) => (
