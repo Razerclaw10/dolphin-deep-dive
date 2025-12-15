@@ -9,6 +9,14 @@ import sceneRevelation from "@/assets/scene-revelation.png";
 
 const scenes = [
   {
+    title: "The Mystery of the Beached Dolphin",
+    description: "by Max Margolis",
+    factoid: "",
+    image: sceneDiscovery,
+    buttonText: "Begin the Adventure",
+    isTitlePage: true,
+  },
+  {
     title: "A Mysterious Discovery",
     description:
       "You're walking along a quiet Gulf Coast beach when you spot something unusual in the sand. It's a bottlenose dolphin, washed ashore. The dolphin has passed away, but what happened to it? Let's begin the investigation...",
@@ -168,6 +176,7 @@ const Index = () => {
         onNext={handleNext}
         onRestart={handleRestart}
         isFinal={currentScene === scenes.length - 1}
+        isTitlePage={scene.isTitlePage}
       />
     </main>
   );
