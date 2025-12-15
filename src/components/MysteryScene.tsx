@@ -124,22 +124,22 @@ export function MysteryScene({
           </div>
         )}
 
-        {/* Info boxes - for final page with multiple sections */}
-        {infoBoxes && infoBoxes.map((box, index) => (
-          <div key={index} className="bg-primary/10 rounded-xl p-5 border-l-4 border-coral">
-            <div className="flex items-start gap-3">
-              <div className="bg-coral rounded-full p-2 shrink-0">
-                <Search className="w-4 h-4 text-accent-foreground" />
-              </div>
-              <div>
-                <h3 className="font-display font-semibold text-foreground mb-1">
+        {/* Info boxes - styled differently for final page */}
+        {infoBoxes && infoBoxes.length > 0 && (
+          <div className="space-y-4 mt-6">
+            {infoBoxes.map((box, index) => (
+              <div 
+                key={index} 
+                className="bg-card rounded-xl p-6 shadow-lg border border-border"
+              >
+                <h3 className="font-display font-bold text-xl text-primary mb-3">
                   {box.title}
                 </h3>
-                <p className="text-muted-foreground font-body">{box.content}</p>
+                <p className="text-muted-foreground font-body leading-relaxed">{box.content}</p>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        )}
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
