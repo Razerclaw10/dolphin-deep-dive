@@ -3,12 +3,18 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Search, ArrowRight, RotateCcw } from "lucide-react";
 
+interface InfoBox {
+  title: string;
+  content: string;
+}
+
 interface MysterySceneProps {
   sceneNumber: number;
   totalScenes: number;
   title: string;
   description: string;
   factoid: string;
+  infoBoxes?: InfoBox[];
   image: string;
   buttonText: string;
   onNext: () => void;
@@ -22,6 +28,7 @@ export function MysteryScene({
   title,
   description,
   factoid,
+  infoBoxes,
   image,
   buttonText,
   onNext,
@@ -113,6 +120,23 @@ export function MysteryScene({
             </div>
           </div>
         )}
+
+        {/* Info boxes - for final page with multiple sections */}
+        {infoBoxes && infoBoxes.map((box, index) => (
+          <div key={index} className="bg-primary/10 rounded-xl p-5 border-l-4 border-coral">
+            <div className="flex items-start gap-3">
+              <div className="bg-coral rounded-full p-2 shrink-0">
+                <Search className="w-4 h-4 text-accent-foreground" />
+              </div>
+              <div>
+                <h3 className="font-display font-semibold text-foreground mb-1">
+                  {box.title}
+                </h3>
+                <p className="text-muted-foreground font-body">{box.content}</p>
+              </div>
+            </div>
+          </div>
+        ))}
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
